@@ -1,0 +1,27 @@
+.menu {
+  width: 100%;
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  box-shadow: 0 2px 2px var(--white_solid);
+  padding: 0 2rem;
+}
+
+.menu_item {
+    font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: var(--dark);
+    font-weight: 600;
+    transition: var(--transition);
+    -webkit-transition: var(--transition);
+    -moz-transition: var(--transition);
+    -ms-transition: var(--transition);
+    -o-transition: var(--transition);
+}
+
+.menu_item:hover {
+    color: var(--clear_blue);
+}
