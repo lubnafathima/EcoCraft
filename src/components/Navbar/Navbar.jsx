@@ -10,8 +10,6 @@ const Navbar = () => {
   return (
     <div className={styles.navbar}>
       <img src={Logo} alt="EcoCraft Logo" className={styles.logo} />
-
-      {/* <div className={styles.left_navbar}></div> */}
       <div className={styles.middle_navbar}>
         <Link to="" className={styles.search_button}>
           <IoSearch />

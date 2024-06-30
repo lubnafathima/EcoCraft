@@ -8,9 +8,6 @@
   padding: 0 2rem;
 }
 
-.left_navbar {
-}
-
 .logo {
   width: auto;
   height: 8vh;
@@ -71,14 +68,25 @@
   color: var(--ruri_blue);
 }
 
-.leaderboard {
+@media screen and (max-width: 1200px) {
+  .logo {
+    height: 6vh;
+  }
+
+  .right_navbar {
+    gap: 1.5rem;
+  }
+
+  .nav_button {
+    font-size: 1.3rem;
+  }
 }
 
-.wishlist {
+@media screen and (max-width: 768px) {
+  .middle_navbar {
+    display: none;
+  }
 }
 
-.cart {
-}
-
-.profile {
+@media screen and (max-width: 480px) {
 }
