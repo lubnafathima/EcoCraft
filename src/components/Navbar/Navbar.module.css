@@ -68,6 +68,37 @@
   color: var(--ruri_blue);
 }
 
+.profile_container {
+  position: relative;
+}
+
+.profile_option {
+  position: absolute;
+  top: 3.5rem;
+  right: 0.5rem;
+  background: #fff;
+  border: 1px solid var(--white_solid);
+  border-radius: 0.1rem;
+  box-shadow: 0 2px 10px var(--white_solid);
+  z-index: 1000;
+}
+
+.profileOption_item {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 10px 30px;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #333;
+  transition: 0.2s ease-in-out;
+}
+
+.profileOption_item:hover {
+  background-color: var(--clear_blue);
+  color: var(--white);
+}
+
 @media screen and (max-width: 1200px) {
   .logo {
     height: 6vh;
@@ -79,6 +110,9 @@
 
   .nav_button {
     font-size: 1.3rem;
+  }
+  .profileOption_item {
+    font-size: .8rem;
   }
 }
 
