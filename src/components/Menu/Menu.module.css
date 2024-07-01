@@ -27,6 +27,10 @@
   color: var(--clear_blue);
 }
 
+.hide {
+  display: none;
+}
+
 @media screen and (max-width: 1200px) {
   .menu {
     gap: 2rem;
@@ -38,9 +42,32 @@
 
 @media screen and (max-width: 768px) {
   .menu {
-    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    min-height: 8vh;
+    justify-content: space-around;
+    padding: 1rem 2rem;
+    box-shadow: 0 -2px 2px var(--white_solid);
+    background-color: var(--white);
+    z-index: 1000;
+  }
+
+  .menu_item {
+    font-size: 1.3rem;
+    color: var(--clear_blue);
+  }
+
+  .menu_item:hover {
+    color: var(--ruri_blue);
   }
 }
 
 @media screen and (max-width: 480px) {
+  .menu {
+    min-height: 6vh; 
+    gap: 1rem; 
+    padding: 0.5rem 1rem; 
+  }
 }

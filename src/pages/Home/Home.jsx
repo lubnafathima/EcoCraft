@@ -1,14 +1,14 @@
-import styles from './Home.module.css';
-import Navbar from "../../components/Navbar/Navbar";
-import Menu from "../../components/Menu/Menu";
+import styles from "./Home.module.css";
+import Layout from "../Layout/Layout";
 
 const Home = () => {
   return (
-    <div className={styles.home}>
-      <Navbar />
-      <Menu />
+    <div>
+      <Layout>
+        <div className={styles.home}></div>
+      </Layout>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

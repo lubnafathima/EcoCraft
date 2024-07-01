@@ -58,6 +58,7 @@ const Navbar = () => {
         >
           <div
             className={styles.profile_container}
+            ref={profileRef}
             onClick={handleProfileClick}
           >
             <RiUser3Fill />
@@ -66,9 +67,6 @@ const Navbar = () => {
             <div className={styles.profile_option}>
               <Link to="/profile" className={styles.profileOption_item}>
                 Profile
-              </Link>
-              <Link to="/leaderboard" className={styles.profileOption_item}>
-                Leaderboard
               </Link>
               <Link to="/settings" className={styles.profileOption_item}>
                 Settings
