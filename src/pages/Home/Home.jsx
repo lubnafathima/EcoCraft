@@ -1,11 +1,11 @@
-import styles from "./Home.module.css";
 import Layout from "../Layout/Layout";
+import HomeComponent from "../../components/Home/Home";
 
 const Home = () => {
   return (
     <div>
       <Layout>
-        <div className={styles.home}></div>
+        <HomeComponent />
       </Layout>
     </div>
   );
