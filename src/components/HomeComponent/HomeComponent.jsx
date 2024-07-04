@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import styles from "./Home.module.css";
+import styles from "./HomeComponent.module.css";
 import Banner1 from "../../assets/images/Home/Banner1.svg";
 import Banner2 from "../../assets/images/Home/Banner2.svg";
 import Banner3 from "../../assets/images/Home/Banner3.svg";
 import Banner4 from "../../assets/images/Home/Banner4.svg";
 
-const Home = () => {
+const HomeComponent = () => {
   return (
     <div className={styles.home}>
       <div className={styles.banner}>
@@ -58,4 +58,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeComponent;
