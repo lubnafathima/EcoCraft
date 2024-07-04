@@ -10,12 +10,12 @@ const Home = () => {
     <div className={styles.home}>
       <div className={styles.banner}>
         <div className={styles.left_banner}>
-          <Link to="">
+          <Link to="/shop">
             <img src={Banner1} alt="Textile" className={styles.banner_img} />
             <div className={styles.banner_text}>
               <p className={styles.banner_item_count}>5 Items</p>
               <h2 className={styles.banner_title}>TEXTILES</h2>
-              <p className={styles.banner_link}>Read More</p>
+              <p className={styles.banner_link}>Shop Now</p>
             </div>
           </Link>
         </div>
@@ -28,11 +28,11 @@ const Home = () => {
             <div className={styles.banner_text}>
               <p className={styles.banner_item_count}>5 Items</p>
               <h2 className={styles.banner_title}>HOME DECOR</h2>
-              <p className={styles.banner_link}>Read More</p>
+              <p className={styles.banner_link}>Shop Now</p>
             </div>
           </Link>
           <div className={styles.bottom_banner}>
-            <Link to="" className={styles.banner_container}>
+            <Link to="/shop" className={styles.banner_container}>
               <img
                 src={Banner3}
                 alt="Jewellery"
@@ -41,14 +41,14 @@ const Home = () => {
               <div className={styles.banner_text}>
                 <p className={styles.banner_item_count}>5 Items</p>
                 <h2 className={styles.banner_title}>JEWELLERY</h2>
-                <p className={styles.banner_link}>Read More</p>
+                <p className={styles.banner_link}>Shop Now</p>
               </div>
             </Link>
-            <Link to="" className={styles.banner_container}>
+            <Link to="/shop" className={styles.banner_container}>
               <img src={Banner4} alt="More" className={styles.banner_img} />
               <div className={styles.banner_text}>
                 <p className={styles.banner_item_count}>100+ Items</p>
-                <h2 className={styles.banner_title}>VIEW MORE</h2>
+                <h2 className={styles.banner_title}>SHOP NOW</h2>
                 </div>
             </Link>
           </div>

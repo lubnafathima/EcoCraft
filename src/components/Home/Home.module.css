@@ -95,12 +95,13 @@
   font-weight: 600;
 }
 
-.banner_link {
-  color: var(--white);
+.banner_title:last-child:hover, .banner_link:hover {
+  color: var(--white_solid);
+  text-decoration: underline;
 }
 
-.banner_link:hover {
-  color: var(--salon_bleu);
+.banner_link {
+  color: var(--white);
 }
 
 @media screen and (max-width: 1200px) {
