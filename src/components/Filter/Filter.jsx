@@ -3,7 +3,7 @@ import styles from "./Filter.module.css";
 import { FaStar, FaRegStar } from "react-icons/fa";
 import { FaFilter } from "react-icons/fa6";
 import { IoIosArrowUp, IoIosArrowDown } from "react-icons/io";
-import { filter_data } from "../../utils/filter";
+import filter_data from "../../utils/filter";
 
 const Filter = () => {
   const [openSections, setOpenSections] = useState({
