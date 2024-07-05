@@ -1,0 +1,122 @@
+[
+  {
+      "crafter_id": 1,
+      "crafter_name": "Rajesh Kumar",
+      "crafter_description": "A master weaver specializing in traditional silk sarees from Varanasi.",
+      "crafter_experience": "20 years",
+      "crafter_crafts": "Textile Weaving",
+      "crafter_image": "https://via.placeholder.com/150",
+      "crafter_rating": 4.9,
+      "crafter_reviews": 120,
+      "crafter_products": ["Silk Saree", "Silk Scarf", "Silk Shawl"],
+      "crafter_followers": 1500,
+      "crafter_following": 50,
+      "crafter_location": "Varanasi, Uttar Pradesh",
+      "crafter_website": "https://rajeshweaves.com",
+      "crafter_contact": "+91-9876543210",
+      "crafter_social_media": [
+          {
+              "platform": "Instagram",
+              "link": "https://instagram.com/rajeshweaves"
+          },
+          {
+              "platform": "Facebook",
+              "link": "https://facebook.com/rajeshweaves"
+          }
+      ],
+      "crafter_testimonial": [
+          "Rajesh's sarees are a true work of art. The quality and craftsmanship are unmatched."
+      ],
+      "crafter_products_id": [1]
+  },
+  {
+      "crafter_id": 2,
+      "crafter_name": "Anita Devi",
+      "crafter_description": "Renowned jeweller known for intricate silver and gold jewellery from Jaipur.",
+      "crafter_experience": "15 years",
+      "crafter_crafts": "Jewellery Making",
+      "crafter_image": "https://via.placeholder.com/150",
+      "crafter_rating": 4.8,
+      "crafter_reviews": 85,
+      "crafter_products": ["Silver Necklace", "Gold Ring", "Gemstone Bracelet"],
+      "crafter_followers": 2000,
+      "crafter_following": 60,
+      "crafter_location": "Jaipur, Rajasthan",
+      "crafter_website": "https://anitajewels.com",
+      "crafter_contact": "+91-9876543211",
+      "crafter_social_media": [
+          {
+              "platform": "Instagram",
+              "link": "https://instagram.com/anitajewels"
+          },
+          {
+              "platform": "Facebook",
+              "link": "https://facebook.com/anitajewels"
+          }
+      ],
+      "crafter_testimonial": [
+          "Anita's jewellery is exquisite and unique, perfect for special occasions."
+      ],
+      "crafter_products_id": [2]
+  },
+  {
+      "crafter_id": 3,
+      "crafter_name": "Deepak Singh",
+      "crafter_description": "Expert in hand-painted ceramics, creating beautiful home decor items.",
+      "crafter_experience": "10 years",
+      "crafter_crafts": "Ceramic Painting",
+      "crafter_image": "https://via.placeholder.com/150",
+      "crafter_rating": 4.7,
+      "crafter_reviews": 65,
+      "crafter_products": ["Hand-painted Vase", "Ceramic Plate", "Decorative Bowl"],
+      "crafter_followers": 1200,
+      "crafter_following": 40,
+      "crafter_location": "Khurja, Uttar Pradesh",
+      "crafter_website": "https://deepakceramics.com",
+      "crafter_contact": "+91-9876543212",
+      "crafter_social_media": [
+          {
+              "platform": "Instagram",
+              "link": "https://instagram.com/deepakceramics"
+          },
+          {
+              "platform": "Facebook",
+              "link": "https://facebook.com/deepakceramics"
+          }
+      ],
+      "crafter_testimonial": [
+          "Deepak's ceramics add a touch of elegance and charm to any home."
+      ],
+      "crafter_products_id": [3]
+  },
+  {
+      "crafter_id": 4,
+      "crafter_name": "Sushila Patel",
+      "crafter_description": "Crafts beautiful, eco-friendly wooden toys and decor items.",
+      "crafter_experience": "12 years",
+      "crafter_crafts": "Woodworking",
+      "crafter_image": "https://via.placeholder.com/150",
+      "crafter_rating": 4.6,
+      "crafter_reviews": 75,
+      "crafter_products": ["Wooden Toy Car", "Wooden Puzzle", "Handcrafted Lamp"],
+      "crafter_followers": 1800,
+      "crafter_following": 55,
+      "crafter_location": "Saharanpur, Uttar Pradesh",
+      "crafter_website": "https://sushilawoodworks.com",
+      "crafter_contact": "+91-9876543213",
+      "crafter_social_media": [
+          {
+              "platform": "Instagram",
+              "link": "https://instagram.com/sushilawoodworks"
+          },
+          {
+              "platform": "Facebook",
+              "link": "https://facebook.com/sushilawoodworks"
+          }
+      ],
+      "crafter_testimonial": [
+          "Sushila's wooden toys are safe, durable, and beautifully crafted."
+      ],
+      "crafter_products_id": [4]
+  }
+]

@@ -9,7 +9,6 @@
   height: calc(98vh - 6rem);
   padding: 1rem;
   overflow-y: auto;
-  box-shadow: 2px 2px 2px var(--border);
   border: 2px solid var(--border);
   border-radius: 1rem;
   -webkit-border-radius: 1rem;
