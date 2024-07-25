@@ -1,0 +1,43 @@
+{
+    "logo": "../src/assets/icons/logo.svg",
+    "tagline": "Where Handcraft Meets Sustainability",
+    "socialLinks": [
+      { "icon": "TiSocialFacebook", "url": "/" },
+      { "icon": "TiSocialLinkedin", "url": "/" },
+      { "icon": "TiSocialTwitter", "url": "/" },
+      { "icon": "TiSocialYoutube", "url": "/" }
+    ],
+    "sections": [
+      {
+        "title": "ABOUT",
+        "links": [
+          { "name": "Our Story", "url": "/" },
+          { "name": "Contact Us", "url": "/" },
+          { "name": "Career", "url": "/" },
+          { "name": "Collaborate with Crafters", "url": "/" },
+          { "name": "Blogs", "url": "/" }
+        ]
+      },
+      {
+        "title": "CUSTOMER CARE",
+        "links": [
+          { "name": "Track Your Order", "url": "/" },
+          { "name": "Returns, Refund & cancellation", "url": "/" },
+          { "name": "Customize Order", "url": "/" },
+          { "name": "Manage your Account", "url": "/" },
+          { "name": "Shopping cart", "url": "/" }
+        ]
+      },
+      {
+        "title": "HELP CENTER",
+        "links": [
+          { "name": "FAQ", "url": "/" },
+          { "name": "Forum", "url": "/" },
+          { "name": "Terms & Condition", "url": "/" },
+          { "name": "Privacy Policy", "url": "/" }
+        ]
+      }
+    ],
+    "copywrite": "© 2024 EcoCraft"
+  }
+  

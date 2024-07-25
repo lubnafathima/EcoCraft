@@ -21,7 +21,7 @@ const HomeComponent = () => {
         </div>
         <div className={styles.right_banner}>
           <Link
-            to=""
+            to="/shop"
             className={`${styles.top_banner} ${styles.banner_container}`}
           >
             <img src={Banner2} alt="Home Decor" className={styles.banner_img} />
