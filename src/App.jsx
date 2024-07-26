@@ -7,6 +7,7 @@ import CrafterPortfolio from "./pages/CrafterPortfolio/CrafterPortfolio";
 import Home from "./pages/Home/Home";
 import Leaderboard from "./pages/Leaderboard/Leaderboard";
 import ProductDetail from "./pages/ProductDetail/ProductDetail";
+import Products from "./pages/Products/Products";
 import Profile from "./pages/Profile/Profile";
 import Settings from "./pages/Settings/Settings";
 import Shop from "./pages/Shop/Shop";
@@ -24,6 +25,7 @@ function App() {
         <Route path="/crafterPortfolio" element={<CrafterPortfolio />} />
         <Route path="/leaderboard" element={<Leaderboard />} />
         <Route path="/ProductDetail" element={<ProductDetail />} />
+        <Route path="/products" element={<Products />} />
         <Route path="/profile" element={<Profile />} />
         <Route path="/settings" element={<Settings />} />
         <Route path="/shop" element={<Shop />} />
