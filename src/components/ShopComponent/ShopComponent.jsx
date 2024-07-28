@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from "react"; 
 import { useNavigate } from "react-router-dom";
 import styles from "./ShopComponent.module.css";
 import { A11y, Autoplay } from "swiper/modules";
@@ -42,6 +42,8 @@ const ShopComponent = () => {
         <div className={styles.loading_item}></div>
         <div className={styles.loading_item}></div>
         <div className={styles.loading_item}></div>
+        <div className={styles.loading_item}></div>
+        <div className={styles.loading_item}></div>
       </div>
     );
   if (error) return <div>Error: {error.message}</div>;
@@ -60,7 +62,10 @@ const ShopComponent = () => {
       >
         {categoryList.map((category) => (
           <SwiperSlide key={category.id}>
-            <div className={styles.category_link} onClick={() => navigate("/products", { state: category.title })}>
+            <div
+              className={styles.category_link}
+              onClick={() => navigate("/products", { state: category.title })}
+            >
               <img
                 src={category.thumbnail_imgSrc}
                 alt={category.title}
