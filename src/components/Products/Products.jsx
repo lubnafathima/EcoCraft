@@ -1,11 +1,18 @@
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import styles from "./Products.module.css";
 import { db } from "../../utils/firebase";
 import { collection, onSnapshot } from "firebase/firestore";
+import { A11y, Autoplay } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
 const Products = () => {
   const { state } = useLocation();
+  const navigate = useNavigate();
   const [productList, setProductList] = useState([]);
   const [category, setCategory] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -36,7 +43,7 @@ const Products = () => {
           ...doc.data(),
         }));
         const matchedCategory = categoryData.find(
-          (cat) => cat.title.toLowerCase() === state.toLowerCase()
+          (category) => category.title.toLowerCase() === state.toLowerCase()
         );
         setCategory(matchedCategory);
       },
@@ -66,18 +73,38 @@ const Products = () => {
 
   return (
     <div className={styles.products}>
-      {state}
-      {category && (
-        <div className={styles.category}>
-          <h2>Sub Categories</h2>
-          <ul>
-            {category.sub_category.map((subCat, index) => (
-              <li key={index}>{subCat}</li>
-            ))}
-          </ul>
-        </div>
-      )}
-      {productList
+      <Swiper
+        className={styles.category}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[A11y, Autoplay]}
+        slidesPerView={6}
+        spaceBetween={10}
+      >
+        {category &&
+          Object.entries(category?.sub_category).map(([key, value]) => (
+            <SwiperSlide key={category.id}>
+              <div
+                key={key}
+                className={styles.subCategory_link}
+                onClick={() => navigate("/products", { state: value?.title })}
+              >
+                <img
+                  src={value?.imgSrc}
+                  alt={value?.title}
+                  className={styles.subCategory_item}
+                />
+                <div className={styles.subCategory_overlay}>
+                  <p className={styles.subCategory_text}>{value?.title}</p>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+      </Swiper>
+      <h1 className={styles.title}>{state}</h1>
+      {/* {productList
         ?.filter(
           (product) => product?.category.toLowerCase() === state.toLowerCase()
         )
@@ -89,15 +116,15 @@ const Products = () => {
               className={styles.productImage}
             />
             <div className={styles.productData}>
-              <h3>{product?.name}</h3>
+              <h3>{product?.product_name}</h3>
               <div>
-                <div className={styles.productPrice}></div>
+                <div className={styles.productPrice}>Rs: {product?.price}</div>
                 <div className={styles.offer}></div>
               </div>
               <p className={styles.productDelivery}></p>
             </div>
           </div>
-        ))}
+        ))} */}
     </div>
   );
 };
