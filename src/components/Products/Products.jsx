@@ -43,9 +43,9 @@ const Products = () => {
           ...doc.data(),
         }));
         const matchedCategory = categoryData.find(
-          (category) => category.title.toLowerCase() === state.toLowerCase()
+          (category) => category.title?.toLowerCase() === state?.toLowerCase()
         );
-        setCategory(matchedCategory);
+        setCategory(matchedCategory || null);
       },
       (err) => {
         setError(err);
@@ -73,18 +73,18 @@ const Products = () => {
 
   return (
     <div className={styles.products}>
-      <Swiper
-        className={styles.category}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        modules={[A11y, Autoplay]}
-        slidesPerView={6}
-        spaceBetween={10}
-      >
-        {category &&
-          Object.entries(category?.sub_category).map(([key, value]) => (
+      {category ? (
+        <Swiper
+          className={styles.category}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          modules={[A11y, Autoplay]}
+          slidesPerView={6}
+          spaceBetween={10}
+        >
+          {Object.entries(category?.sub_category || {}).map(([key, value]) => (
             <SwiperSlide key={category.id}>
               <div
                 key={key}
@@ -102,29 +102,37 @@ const Products = () => {
               </div>
             </SwiperSlide>
           ))}
-      </Swiper>
+        </Swiper>
+      ) : (
+        <p className={styles.noCategory}>No categories found.</p>
+      )}
       <h1 className={styles.title}>{state}</h1>
-      {/* {productList
-        ?.filter(
-          (product) => product?.category.toLowerCase() === state.toLowerCase()
-        )
-        .map((product) => (
-          <div key={product?.id} className={styles.productCard}>
-            <img
-              src={product?.ImgSrc}
-              alt={product?.name}
-              className={styles.productImage}
-            />
-            <div className={styles.productData}>
-              <h3>{product?.product_name}</h3>
-              <div>
-                <div className={styles.productPrice}>Rs: {product?.price}</div>
-                <div className={styles.offer}></div>
+      {productList.length > 0 ? (
+        productList
+          ?.filter(
+            (product) =>
+              product?.category?.toLowerCase() === state?.toLowerCase()
+          )
+          .map((product) => (
+            <div key={product?.id} className={styles.productCard}>
+              <img
+                src={product?.ImgSrc}
+                alt={product?.name}
+                className={styles.productImage}
+              />
+              <div className={styles.productData}>
+                <h3>{product?.product_name}</h3>
+                <div>
+                  <div className={styles.productPrice}>Rs: {product?.price}</div>
+                  <div className={styles.offer}></div>
+                </div>
+                <p className={styles.productDelivery}></p>
               </div>
-              <p className={styles.productDelivery}></p>
             </div>
-          </div>
-        ))} */}
+          ))
+      ) : (
+        <p>No products found for this category.</p>
+      )}
     </div>
   );
 };
