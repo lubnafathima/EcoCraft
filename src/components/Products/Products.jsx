@@ -17,6 +17,7 @@ const Products = () => {
   const [category, setCategory] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [subCategory, setSubCategory] = useState(null);
 
   useEffect(() => {
     const unsubscribeProducts = onSnapshot(
@@ -58,6 +59,18 @@ const Products = () => {
     };
   }, [state]);
 
+  const handleSubCategoryClick = (subCategoryTitle) => {
+    setSubCategory(subCategoryTitle);
+  };
+
+  const filteredProducts = productList.filter((product) => {
+    const matchesCategory = product?.category?.toLowerCase() === state?.toLowerCase();
+    const matchesSubCategory = subCategory
+      ? product?.sub_category?.toLowerCase() === subCategory?.toLowerCase()
+      : true;
+    return matchesCategory && matchesSubCategory;
+  });
+
   if (loading)
     return (
       <div className={styles.loading}>
@@ -85,11 +98,11 @@ const Products = () => {
           spaceBetween={10}
         >
           {Object.entries(category?.sub_category || {}).map(([key, value]) => (
-            <SwiperSlide key={category.id}>
+            <SwiperSlide key={key}>
               <div
                 key={key}
                 className={styles.subCategory_link}
-                onClick={() => navigate("/products", { state: value?.title })}
+                onClick={() => handleSubCategoryClick(value?.title)}
               >
                 <img
                   src={value?.imgSrc}
@@ -107,29 +120,24 @@ const Products = () => {
         <p className={styles.noCategory}>No categories found.</p>
       )}
       <h1 className={styles.title}>{state}</h1>
-      {productList.length > 0 ? (
-        productList
-          ?.filter(
-            (product) =>
-              product?.category?.toLowerCase() === state?.toLowerCase()
-          )
-          .map((product) => (
-            <div key={product?.id} className={styles.productCard}>
-              <img
-                src={product?.ImgSrc}
-                alt={product?.name}
-                className={styles.productImage}
-              />
-              <div className={styles.productData}>
-                <h3>{product?.product_name}</h3>
-                <div>
-                  <div className={styles.productPrice}>Rs: {product?.price}</div>
-                  <div className={styles.offer}></div>
-                </div>
-                <p className={styles.productDelivery}></p>
+      {filteredProducts.length > 0 ? (
+        filteredProducts.map((product) => (
+          <div key={product?.id} className={styles.productCard}>
+            <img
+              src={product?.imgSrc[0]}
+              alt={product?.name}
+              className={styles.productImage}
+            />
+            <div className={styles.productData}>
+              <h3>{product?.product_name}</h3>
+              <div>
+                <div className={styles.productPrice}>Rs: {product?.price}</div>
+                <div className={styles.offer}></div>
               </div>
+              <p className={styles.productDelivery}></p>
             </div>
-          ))
+          </div>
+        ))
       ) : (
         <p>No products found for this category.</p>
       )}
