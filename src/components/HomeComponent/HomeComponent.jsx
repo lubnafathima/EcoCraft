@@ -1,4 +1,4 @@
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import styles from "./HomeComponent.module.css";
 import Banner1 from "../../assets/images/Home/Banner1.svg";
 import Banner2 from "../../assets/images/Home/Banner2.svg";
