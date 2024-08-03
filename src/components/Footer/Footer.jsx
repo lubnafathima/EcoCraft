@@ -7,6 +7,7 @@ import {
   TiSocialTwitter,
   TiSocialYoutube,
 } from "react-icons/ti";
+import Logo from "../../assets/icons/logo.svg";
 
 const socialIcons = {
   TiSocialFacebook,
@@ -22,7 +23,7 @@ const Footer = () => {
         <div className={`${styles.footer_data} ${styles.footer_section}`}>
           <Link to="/">
             <img
-              src={footerData.logo}
+              src={Logo}
               alt="EcoCraft Logo"
               className={styles.logo}
             />
