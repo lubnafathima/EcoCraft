@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import styles from "./Products.module.css";
 import { db } from "../../utils/firebase";
 import { collection, onSnapshot } from "firebase/firestore";
@@ -12,7 +12,6 @@ import "swiper/css/scrollbar";
 
 const Products = () => {
   const { state } = useLocation();
-  const navigate = useNavigate();
   const [productList, setProductList] = useState([]);
   const [category, setCategory] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -64,7 +63,8 @@ const Products = () => {
   };
 
   const filteredProducts = productList.filter((product) => {
-    const matchesCategory = product?.category?.toLowerCase() === state?.toLowerCase();
+    const matchesCategory =
+      product?.category?.toLowerCase() === state?.toLowerCase();
     const matchesSubCategory = subCategory
       ? product?.sub_category?.toLowerCase() === subCategory?.toLowerCase()
       : true;
@@ -120,27 +120,31 @@ const Products = () => {
         <p className={styles.noCategory}>No categories found.</p>
       )}
       <h1 className={styles.title}>{state}</h1>
-      {filteredProducts.length > 0 ? (
-        filteredProducts.map((product) => (
-          <div key={product?.id} className={styles.productCard}>
-            <img
-              src={product?.imgSrc[0]}
-              alt={product?.name}
-              className={styles.productImage}
-            />
-            <div className={styles.productData}>
-              <h3>{product?.product_name}</h3>
-              <div>
-                <div className={styles.productPrice}>Rs: {product?.price}</div>
-                <div className={styles.offer}></div>
+      <div className={styles.productContainer}>
+        {filteredProducts.length > 0 ? (
+          filteredProducts.map((product) => (
+            <div key={product?.id} className={styles.productCard}>
+              <img
+                src={product?.imgSrc[0]}
+                alt={product?.name}
+                className={styles.productImage}
+              />
+              <div className={styles.productData}>
+                <p>{product?.product_name}</p>
+                <div>
+                  <div className={styles.productPrice}>
+                    Rs: {product?.price}
+                  </div>
+                  <div className={styles.offer}></div>
+                </div>
+                <p className={styles.productDelivery}></p>
               </div>
-              <p className={styles.productDelivery}></p>
             </div>
-          </div>
-        ))
-      ) : (
-        <p>No products found for this category.</p>
-      )}
+          ))
+        ) : (
+          <p>No products found for this category.</p>
+        )}
+      </div>
     </div>
   );
 };
