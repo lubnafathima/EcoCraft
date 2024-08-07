@@ -1,0 +1,46 @@
+.blogs {
+  width: 100%;
+  padding: 2rem 5rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 500;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  color: var(--ruri_blue);
+}
+
+.title::before {
+  content: "";
+  width: 20%;
+  height: 0.1rem;
+  background-color: var(--ruri_blue);
+  top: 50%;
+  left: 0;
+  position: absolute;
+}
+
+.title::after {
+  content: "";
+  width: 20%;
+  height: 0.1rem;
+  background-color: var(--ruri_blue);
+  top: 50%;
+  right: 0;
+  position: absolute;
+}
+
+.blogsContainer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 2rem;
+  grid-row-gap: 5rem;
+}
+
+.blogsCard {
+  width: 100%;
+  height: 100px;
+  box-shadow: 1px 1px 10px #ccc;
+}
