@@ -37,8 +37,8 @@ const menuList = [
   },
   {
     id: 6,
-    link: "/blog",
-    title: "Blog",
+    link: "/blogs",
+    title: "Blogs",
   },
 ];
 
