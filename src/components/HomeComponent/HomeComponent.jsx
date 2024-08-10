@@ -10,6 +10,7 @@ const HomeComponent = () => {
 
   return (
     <div className={styles.home}>
+      {/* banner section */}
       <div className={styles.banner}>
         <div className={styles.left_banner}>
           <div onClick={() => navigate("/products", { state: "Textiles" })}>
@@ -62,6 +63,7 @@ const HomeComponent = () => {
           </div>
         </div>
       </div>
+      {/* bestseller */}
     </div>
   );
 };
